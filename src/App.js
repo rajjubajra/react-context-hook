@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import BookList from './components/BookList';
 import ThemeContextProvider from './contexts/ThemeContext';
+import ToogleTheme from './components/ToogleTheme';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <ThemeContextProvider>
           <Navbar />
           <BookList />
+          <ToogleTheme />
       </ThemeContextProvider>
     </div>
   );
