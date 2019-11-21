@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import uuid from 'uuid/v1';
 
 const SongList = () => {
   const [songs, setSongs] = useState([
@@ -6,6 +7,10 @@ const SongList = () => {
     {title: 'Bridge over trouble water', id: 2},
     {title: 'Imagine', id: 3},
   ])
+
+  const addSong = () => {
+    setSongs([...songs, {title: 'Wa maya wa', id: uuid() }])
+  }
 
   return (
     <div className="row">
@@ -20,6 +25,7 @@ const SongList = () => {
         })
       }
       </ul>
+      <button className="btn" onClick={addSong}>Add Song</button>
     </div>
   )
 }
