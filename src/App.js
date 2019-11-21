@@ -3,11 +3,15 @@ import SongList from './components/SongList';
 
 
 
+
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <SongList />
+        <div className="row">
+          <SongList />
+        </div>
+        
       </div>
     
     </div>
